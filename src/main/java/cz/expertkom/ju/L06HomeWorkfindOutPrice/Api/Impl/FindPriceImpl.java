@@ -17,6 +17,7 @@ public class FindPriceImpl implements FindPriceApi {
 	public Response getPrice(String htmlString) {
 		ProductPrice productPrice = new ProductPrice();
 		productPrice = getPriceInterface.getProductPrice(htmlString);
+		System.out.println(productPrice);
 		return Response.ok(productPrice).build();
 	}
 	
